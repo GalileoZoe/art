@@ -1,0 +1,98 @@
+/* Estilos artísticos para el botón */
+.artistic-button {
+  position: relative;
+  padding: 12px 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.artistic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #d4af37, #f2d279);
+  z-index: -1;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-origin: bottom right;
+}
+
+.artistic-button:hover::before {
+  transform: scaleX(1.05) scaleY(1.05);
+}
+
+.artistic-button .button-text {
+  position: relative;
+  z-index: 1;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.artistic-button:hover .button-text {
+  color: #000;
+}
+
+.artistic-button .button-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-out;
+}
+
+.artistic-button:hover .button-effect {
+  transform: translateX(0);
+}
+
+/* Variantes */
+.artistic-button.primary::before {
+  background: linear-gradient(135deg, #d4af37, #f2d279);
+}
+
+.artistic-button.secondary::before {
+  background: linear-gradient(135deg, #2c3e50, #4a6572);
+}
+
+.artistic-button.secondary .button-text {
+  color: #fff;
+}
+
+.artistic-button.outline {
+  border: 1px solid #d4af37;
+}
+
+.artistic-button.outline::before {
+  opacity: 0;
+}
+
+.artistic-button.outline:hover::before {
+  opacity: 1;
+}
+
+/* Tamaños */
+.artistic-button.small {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+.artistic-button.medium {
+  padding: 12px 28px;
+  font-size: 1rem;
+}
+
+.artistic-button.large {
+  padding: 16px 36px;
+  font-size: 1.15rem;
+}

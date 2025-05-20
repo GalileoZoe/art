@@ -1,0 +1,100 @@
+.exhibitions-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  max-height: 80vh;        /* ✅ Altura máxima para activar scroll */
+  overflow-y: auto;        /* ✅ Scroll vertical si el contenido se desborda */
+}
+
+.exhibitions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  /* overflow-y: auto; ← ya no es necesario aquí */
+  /* overflow-x: hidden; */
+  height: calc(100vh - 80px); /* Altura visible restante */
+  overflow-y: auto;    
+}
+
+.exhibitions-title {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.exhibitions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.exhibition-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibition-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+}
+
+.exhibition-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.exhibition-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.exhibition-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.exhibition-description {
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .exhibitions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .exhibitions-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .exhibitions-container {
+    padding: 1rem;
+    margin-top: 60px;
+  }
+
+  .exhibitions-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

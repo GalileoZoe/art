@@ -1,0 +1,11 @@
+.footer{
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, #caa472, #8b5e3c); /* Simula la madera */
+    box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.1); /* Sombra superior suave */
+    position: relative;
+    z-index: 1;
+    position: fixed;
+    bottom:0;
+    z-index: 0;
+}
