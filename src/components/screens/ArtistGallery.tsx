@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ArtistGallery.css';
-import { NavButton } from '../common/NavButton';
+import { NavButton } from '../components/NavButton';
 import { useFeed } from '../../context/FeedContext';
 
 const ArtistGallery: React.FC = () => {

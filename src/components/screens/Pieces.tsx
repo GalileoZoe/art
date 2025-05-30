@@ -32,8 +32,8 @@ export const Pieces: React.FC = () => {
 
   const categories = [
     { id: 'all', label: 'Obras destacadas' },
-    { id: 'murales', label: 'Murales' },
     { id: 'pinturas', label: 'Pinturas' },
+    { id: 'murales', label: 'Murales' },
     { id: 'graffiti', label: 'Graffiti' },
     { id: 'bodyart', label: 'Body Art' },
   ];
@@ -65,8 +65,8 @@ export const Pieces: React.FC = () => {
 
   return (
     <div className="home-container">
-      <header className="home-header">
-        <div id="obras" className="featured-section">
+      <header className="pieces-header">
+        <div id="obras">
           <h2 className="featured-title">
             {categories.find(cat => cat.id === selectedCategory)?.label || 'Obras Destacadas'}
           </h2>
@@ -80,7 +80,7 @@ export const Pieces: React.FC = () => {
                   setCurrentIndex(0); // reset del índice al cambiar categoría
                 }}
               >
-                {category.label}
+                {category.label==='Obras destacadas'? 'Todas':category.label}
               </button>
             ))}
           </div>

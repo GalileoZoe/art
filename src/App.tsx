@@ -8,19 +8,19 @@ import { Footer } from './components/layout/Footer';
 const Apps = () => {
 
   return (
-    <div>
+    
       <header className="App-header">
         
         <NavBar/>
         <main className="main-content">
-          <div className='body'>
+          <div>
             <Layout />
           </div>
         </main>
     
         <Footer />
       </header>
-    </div>
+    
   );
 }
 

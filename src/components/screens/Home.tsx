@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { useFeed } from '../../context/FeedContext';
-import { NavButton } from '../common/NavButton';
+import { NavButton } from '../components/NavButton';
 import '../../styles/Home.css';
 import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
 
 
-const driverObj = driver({
-  showProgress: true,
-  steps: [
-    { element: '#navbar', popover: { title: 'Navega Fácilmente', description: 'Conóceme, interactúa y descubre mis obras de arte.', side: "bottom", align: 'start' }},
-    { element: '#buttonhome', popover: { title: 'Bienvenido a mi Galería de Arte', description: '¡Diviértete!', side: "top", align: 'start' }},
-    // { element: 'code .line:nth-child(2)', popover: { title: 'Importing CSS', description: 'Import the CSS which gives you the default styling for popover and overlay.', side: "bottom", align: 'start' }},
-    // { element: 'code .line:nth-child(4) span:nth-child(7)', popover: { title: 'Create Driver', description: 'Simply call the driver function to create a driver.js instance', side: "left", align: 'start' }},
-    // { element: 'code .line:nth-child(18)', popover: { title: 'Start Tour', description: 'Call the drive method to start the tour and your tour will be started.', side: "top", align: 'start' }},
-    // { element: 'a[href="/docs/configuration"]', popover: { title: 'More Configuration', description: 'Look at this page for all the configuration options you can pass.', side: "right", align: 'start' }},
-    // { popover: { title: 'Happy Coding', description: 'And that is all, go ahead and start adding tours to your applications.' } }
-  ]
-});
+// const driverObj = driver({
+//   showProgress: true,
+//   steps: [
+//     { element: '#navbar', popover: { title: 'Navega Fácilmente', description: 'Conóceme, interactúa y descubre mis obras de arte.', side: "bottom", align: 'start' }},
+//     { element: '#', popover: { title: 'Bienvenido a mi Galería de Arte', description: '¡Diviértete!', side: "top", align: 'start' }},
+//     // { element: 'code .line:nth-child(2)', popover: { title: 'Importing CSS', description: 'Import the CSS which gives you the default styling for popover and overlay.', side: "bottom", align: 'start' }},
+//     // { element: 'code .line:nth-child(4) span:nth-child(7)', popover: { title: 'Create Driver', description: 'Simply call the driver function to create a driver.js instance', side: "left", align: 'start' }},
+//     // { element: 'code .line:nth-child(18)', popover: { title: 'Start Tour', description: 'Call the drive method to start the tour and your tour will be started.', side: "top", align: 'start' }},
+//     // { element: 'a[href="/docs/configuration"]', popover: { title: 'More Configuration', description: 'Look at this page for all the configuration options you can pass.', side: "right", align: 'start' }},
+//     // { popover: { title: 'Happy Coding', description: 'And that is all, go ahead and start adding tours to your applications.' } }
+//   ]
+// });
 
-driverObj.drive();
+// driverObj.drive();
 
 
 
@@ -53,20 +53,20 @@ const { changeFeed } = useFeed();
    
       <header className="home-header">
       <div className="featured-artwork">
+        
        <img className='art-base' src={require('../../assets/k9.png')} alt="Obra Destacada" />
 
       </div>
-        <a className="home-title">Bienvenidos a la Galería de Arte</a>
+        <a className="home-title">Bienvenido a mi Galería de Arte</a>
+        <br />
         <p className="home-description">
           Descubre una colección única de obras maestras que capturan la esencia de la creatividad y la pasión artística.
         </p>
-        <a id='buttonhome' className='button' onClick={()=>changeFeed(3)}>
+        <a id='' className='button' onClick={()=>changeFeed(3)}>
           Explorar Galería
         </a>
-        <br />
+       
       </header>
-
-     
     </div>
   );
 

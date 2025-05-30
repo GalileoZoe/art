@@ -1,13 +1,29 @@
 .home-container {
   max-width: 1200px;
-  min-height: 100vh;
+  min-height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
+  position: relative;
+  align-self: center;
+  /* position:'sticky'; */
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width:85%;
+  height: 50% ;
+  left: 50%;
+  translate:  0 -50%;
+  transform: translateX(-50%);
+  top: 400px;
+  overflow: hidden;
+  max-height: 80%;
 }
+
+
 
 .home-header {
   position: fixed; /* Necesario para que left y transform funcionen */
@@ -19,27 +35,52 @@
   justify-content: center;
   flex-direction: column;
   width: 85%;
-  background-color: #fff;
+  background-color:#ffffff69 ;
   border-radius: 0px 0px 10px 10px; /* Solo esquinas superiores redondeadas */
-  z-index: 1000;
   box-shadow: 
   0 4px 8px -4px rgba(0, 0, 0, 0.3),   /* abajo */
   -4px 0 8px -4px rgba(0, 0, 0, 0.3),  /* izquierda */
   4px 0 8px -4px rgba(0, 0, 0, 0.3);   /* derecha */
   height: 85%;
+  z-index: 0;
+  /* top:-50px; */
+}
+.location-header {
+  position: fixed; /* Necesario para que left y transform funcionen */
+  /* top: 13%; Puedes ajustar según lo que necesites */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 85%;
+  background-color:#ffffff69 ;
+  border-radius: 0px 0px 10px 10px; /* Solo esquinas superiores redondeadas */
+  box-shadow: 
+  0 4px 8px -4px rgba(0, 0, 0, 0.3),   /* abajo */
+  -4px 0 8px -4px rgba(0, 0, 0, 0.3),  /* izquierda */
+  4px 0 8px -4px rgba(0, 0, 0, 0.3);   /* derecha */
+  height: 85%;
+  z-index: 0;
+  /* top:-50px; */
 }
 
 
 .home-title {
   font-family:'Nunito', sans-serif;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-weight: 'bold';
+  top: -20px;
+
 }
 
 .home-description {
-  font-size: 1.2rem;
-  color: #000;
+  font-size: 1rem;
+  color: #1a1a1a;
   font-family: 'Nunito', sans-serif;
+
 }
 
 .browse-button {
@@ -68,64 +109,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  top:-50px
+
 }
 
-.art-base {
-  width: 100%;
-  height: 100%;
-  align-self: center;
-}
-
-.art-frame {
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
- box-shadow: 
-    inset 0 0 20px rgba(0, 0, 0, 0.2),
-    0 0 15px rgba(212, 175, 55, 0.3);
-  z-index: 2;
-  overflow: hidden;
-}
-
-
-
-.painting-card {
-  border: 2px solid #d4af37;
-  border-radius: 8px;
-  padding: 1rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background-color: white;
-  max-width: 300px;
-  width: 100%;
-  align-self: center;
-}
-
-.painting-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
-}
-
-.painting-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.painting-title {
-  color: rgba(51, 51, 51, 0.10);
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 5px;
-  margin: 1rem;
-}
 
 .button{
-background-color: rgba(90, 90, 90, 0.5);
-border-radius: 10px;
+background-color: rgba(180, 180, 180, 0.298);
+border-radius: 100px;
 color: #000;
 padding: 10px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -134,9 +126,11 @@ left: 50%;
 transform: translateX(-50%);
 position: absolute;
 bottom: 10px;
+font-weight: bolder;
+margin-bottom: 20px;
 }
 .button:hover{
-  background-color: rgba(90, 90, 90, 0.6);
+  background-color: rgba(166, 166, 166, 0.318);
 }
 
 @media (max-width: 1024px) {

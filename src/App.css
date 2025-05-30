@@ -14,13 +14,14 @@
 }
 
 .App-header {
-  background-color: #c0c0c0c0;
+  background-color:whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
+  z-index: 0;
 }
 
 .App-link {
@@ -37,7 +38,7 @@
 }
 
 .body{
-  background-color: rgba(255, 255, 255, 0.199); /* blanco con transparencia */
+  background-color: rgb(255, 255, 255); /* blanco con transparencia */
    border-radius: 30px;
    border-top-left-radius: 0;
    border-top-right-radius: 0;

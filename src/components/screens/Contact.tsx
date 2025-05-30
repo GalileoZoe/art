@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { useFeed } from '../../context/FeedContext';
+import { Camera, Facebook, Phone, MessageCircle, Instagram } from 'lucide-react';
+// import { DynamicIcon } from 'lucide-react/dynamic';
+// import { coconut } from '@lucide/lab';
+
 
 export const Contact: React.FC = () => {
   const { changeFeed } = useFeed();
@@ -22,31 +26,56 @@ export const Contact: React.FC = () => {
         left: '50%',
         translate: ' 0 -50%',
         transform: 'translateX(-50%)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        zIndex: '1' // Asegura que el formulario esté por encima de otros componentes
       }}>
-        <h2 style={{ marginBottom: '20px', color: '#333' }}>Contáctame</h2>
-        <form style={{
-          display: 'grid',
-          gap: '20px'
-        }}>
-          <input
-            type="text"
-            placeholder="Name"
-            className="form-input"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="form-input"
-          />
-          <textarea
-            placeholder="Message"
-            rows={5}
-            className="form-input form-textarea"
-          />
-          <button style={styles.submitButton}>Send Message</button>
-        </form>
-        <p>o</p>
+        <h2 style={{ marginBottom: '20px', color: '#333' }}>Contáctanos</h2>
+        <div   style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '20px'
+  }}>
 
+    <img style={{maxHeight:'100px', minHeight:'100px', width:'100%' }} src={require('../../assets/logo-tp.png')} alt='' />
+    <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logolerma.png')}/>
+    <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logo24k.png')} alt='' />
+    <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logo.png')} alt='' />
+    </div>
+      
+      
+        <div   style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '20px',
+    textAlign:'center',
+    paddingBottom:'10vh'
+  }}>
+         <Camera color='#d4af37' size={48} />
+         <Facebook color='#d4af37' size={48} />
+         <Phone color='#d4af37' size={48} />
+         <MessageCircle color='#d4af37' size={48} />
+         <Instagram color='#d4af37' size={48} />
+         {/* <DynamicIcon name="camera" color="red" size={48} /> */}
+         {/* <Icon iconNode={coconut} /> */}
+         </div>
+         
+         <a style={{
+  borderRadius: '30px',
+  backgroundColor: '#d4af37',
+  textDecoration: 'none',
+  color: 'white',
+  padding: '10px 20px',
+  transform: 'translate(-50%, -50%)',
+  position: 'absolute',
+  left: '50%',
+  top: '90%',
+  fontSize: '1.2em',
+  transition: 'background-color 0.3s ease',
+}} href="wa.me//+527221427901">WhatsApp</a>
       </div>
     </div>
   );
