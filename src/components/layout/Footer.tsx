@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/Footer.css';
+import { useFeed } from '../../context/FeedContext';
+
 
 const leftSprites = [
   require('../../assets/left_1.png'),
@@ -16,6 +18,8 @@ export const Footer: React.FC = () => {
   const [step, setStep] = useState(0);
   const [position, setPosition] = useState(0);
   const [isIdle, setIsIdle] = useState(false);
+const{feed, changeFeed}=useFeed();
+
 
   useEffect(() => {
     const center = window.innerWidth / 2 - 30;
@@ -52,7 +56,7 @@ export const Footer: React.FC = () => {
   return (
     <nav className="footer">
       <div className="walker" style={{ left: `${position}px` }}>
-        <img src={sprite} alt="monito" />
+       <a title='kaspas' onClick={()=>changeFeed(4)}> <img src={sprite} alt="kaspas" /></a>
       </div>
     </nav>
   );

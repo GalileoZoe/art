@@ -1,8 +1,8 @@
 .footer {
   width: 100%;
-  height: 5%;
-  background: linear-gradient(to bottom, #caa472 40%, #8b5e3c 60%);
-  box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.1);
+  height: 15%;
+  background: linear-gradient(to bottom, #ffffff00 60%, #58430f 10%, #ba9539 30%);
+  /* box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.1); */
   position: fixed;
   bottom: 0;
   overflow: hidden;

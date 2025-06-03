@@ -3,12 +3,13 @@ import { useFeed } from '../../context/FeedContext';
 import './NavButton.css';
 
 interface NavButtonProps {
-  onClick: () => void;
-  children: React.ReactNode;
+  title?: string;
+  onClick?: () => void;
+  children?: React.ReactNode;
   feedId?: number;
 }
 
-export const NavButton: React.FC<NavButtonProps> = ({ onClick, children, feedId }) => {
+export const NavButton: React.FC<NavButtonProps> = ({ title, onClick, children, feedId }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { feed } = useFeed();
 
@@ -18,6 +19,7 @@ export const NavButton: React.FC<NavButtonProps> = ({ onClick, children, feedId 
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      title={title}
     >
       {children}
     </button>

@@ -35,7 +35,7 @@
   justify-content: center;
   flex-direction: column;
   width: 85%;
-  background-color:#ffffff69 ;
+  background-color:transparent ;
   border-radius: 0px 0px 10px 10px; /* Solo esquinas superiores redondeadas */
   box-shadow: 
   0 4px 8px -4px rgba(0, 0, 0, 0.3),   /* abajo */

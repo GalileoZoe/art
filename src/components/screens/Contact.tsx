@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useFeed } from '../../context/FeedContext';
-import { Camera, Facebook, Phone, MessageCircle, Instagram } from 'lucide-react';
+import { Camera, Facebook, Phone, MessageCircle, Instagram, ShoppingCart, Code, Code2, CodeIcon, Code2Icon, PcCaseIcon, Laptop, Laptop2Icon, LaptopMinimal, LaptopMinimalCheckIcon, ShieldClose, XCircleIcon } from 'lucide-react';
 // import { DynamicIcon } from 'lucide-react/dynamic';
 // import { coconut } from '@lucide/lab';
 
@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        zIndex: '1' // Asegura que el formulario esté por encima de otros componentes
+        zIndex: '0' // Asegura que el formulario esté por encima de otros componentes
       }}>
         <h2 style={{ marginBottom: '20px', color: '#333' }}>Contáctanos</h2>
         <div   style={{
@@ -39,10 +39,10 @@ export const Contact: React.FC = () => {
     marginTop: '20px'
   }}>
 
-    <img style={{maxHeight:'100px', minHeight:'100px', width:'100%' }} src={require('../../assets/logo-tp.png')} alt='' />
-    <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logolerma.png')}/>
-    <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logo24k.png')} alt='' />
-    <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logo.png')} alt='' />
+   <a href='https://galileozoe.github.io/tierraprometidawebsite'> <img style={{maxHeight:'100px', minHeight:'100px', width:'100%' }} src={require('../../assets/logo-tp.png')} alt='Tierra Prometida' /></a>
+   <a onClick={()=>changeFeed(9)}> <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logolerma.png')} alt='Lerma' /></a>
+   <a onClick={()=>changeFeed(8)}> <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logo24k.png')} alt='24 Kilates' /></a>
+   <a onClick={()=>changeFeed(7)}> <img style={{maxHeight:'100px', minHeight:'110px', width:'100%' }} src={require('../../assets/logo.png')} alt='Bendizion' /></a>
     </div>
       
       
@@ -59,10 +59,13 @@ export const Contact: React.FC = () => {
          <Phone color='#d4af37' size={48} />
          <MessageCircle color='#d4af37' size={48} />
          <Instagram color='#d4af37' size={48} />
+         <ShoppingCart color='#d4af37' size={48} />
+         <Laptop color='#d4af37' size={48} />
+
          {/* <DynamicIcon name="camera" color="red" size={48} /> */}
          {/* <Icon iconNode={coconut} /> */}
          </div>
-         
+         <br />
          <a style={{
   borderRadius: '30px',
   backgroundColor: '#d4af37',

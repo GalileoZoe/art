@@ -7,6 +7,10 @@ import { Contact } from '../screens/Contact';
 import { Pieces } from '../screens/Pieces';
 import { About } from '../screens/About';
 import { Location } from '../screens/Location';
+import { Store } from '../screens/Store';
+import { Lerma } from '../screens/Lerma';
+import { XXIVK } from '../screens/XXIVK';
+
 
 export const Layout: React.FC = () => {
     const { feed } = useFeed();
@@ -24,6 +28,12 @@ export const Layout: React.FC = () => {
             return <Location/>;
         case 6:
             return <Contact/>;
+        case 7:
+            return <Store/>;
+        case 8:
+            return <XXIVK/>;
+        case 9:
+            return <Lerma/>;
         default:
             return <Home/>;
     }
