@@ -18,6 +18,21 @@
 
 }
 
+.buttonabout{
+  border-radius: 20px;
+  background-color: #d4af37;
+  color: #f0f0f0 ;
+  padding: 0.7rem 1rem;
+  margin-right: 0.5rem;
+}
+
+.buttonmore{
+  color: #d4af37 ;
+  margin-right: 0.5rem;
+  text-decoration:underline;
+  text-decoration-color: #d4af37;
+}
+
 .home-description {
   font-size: 1rem;
   color: #1a1a1a;

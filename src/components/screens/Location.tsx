@@ -5,7 +5,7 @@ export const Location: React.FC = () => {
   return (
     <div className="home-container">
       <header className="location-header">
-        <div className="location-section">
+        <div>
           <h1 className="featured-title">Nuestra Ubicación</h1>
           <div style={{
             width: '800px',

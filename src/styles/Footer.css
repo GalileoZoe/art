@@ -3,10 +3,11 @@
   height: 15%;
   background: linear-gradient(to bottom, #ffffff00 60%, #58430f 10%, #ba9539 30%);
   /* box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.1); */
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1; /* El footer NO está por encima de todo */
+
 }
 
 .walker {
@@ -23,4 +24,5 @@
   pointer-events: none;
   user-select: none;
   display: block;
+  
 }

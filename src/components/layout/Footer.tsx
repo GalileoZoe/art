@@ -54,10 +54,12 @@ const{feed, changeFeed}=useFeed();
     : leftSprites[step];
 
   return (
-    <nav className="footer">
-      <div className="walker" style={{ left: `${position}px` }}>
-       <a title='kaspas' onClick={()=>changeFeed(4)}> <img src={sprite} alt="kaspas" /></a>
+    <nav className='footer' >
+      <div className='walker' style={{ left: `${position}px` }}>
+       <a title='kaspas' onClick={()=>changeFeed(4)}> <img id='kaspas' src={sprite} alt='kaspas' /></a>
       </div>
+      <img className='mamut' src={require('../../assets/mamut.png')} />
+
     </nav>
   );
 };

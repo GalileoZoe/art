@@ -19,7 +19,6 @@
   translate:  0 -50%;
   transform: translateX(-50%);
   top: 400px;
-  overflow: hidden;
   max-height: 80%;
   z-index: 0;
 }

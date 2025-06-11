@@ -23,7 +23,7 @@ export const NavBar: React.FC = () => {
 
 
   return (
-    <nav id='navbar'  className='navbar'>
+    <nav id='navbar'  className='navbar' >
       
     {/* {isOpen?
       <XCircleIcon color='#000' size={20} />
@@ -42,8 +42,8 @@ export const NavBar: React.FC = () => {
     <NavButton onClick={() => changeFeed(6)} feedId={6}>Contacto</NavButton> 
     <NavButton onClick={() => changeFeed(2)} feedId={2}>Exhibiciones</NavButton>
     <NavButton onClick={() => changeFeed(3)} feedId={3}>Obras</NavButton>
+    {feed!==1&&<NavButton onClick={() => changeFeed(1)} feedId={1}>Inicio</NavButton>}
     </>
-    {/* <NavButton title='Ubicación' onClick={() => changeFeed(5)} feedId={5}><MapPinIcon color={feed===5?'#d4af37':'#000'} size={20} /></NavButton> */}
     
     
     <NavLogo onClick={() => changeFeed(1)}> <img src={require('../../assets/logokaspasbg.png')} alt='Kaspas Logo' className='navbarlogoimg' /></NavLogo>

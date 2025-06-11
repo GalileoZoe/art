@@ -29,7 +29,7 @@ const { changeFeed } = useFeed();
             <p className="home-description">Licenciado en Arte y Diseño.</p>
             <br />
             <p className="home-description">
-            Apasionado del arte. Encargado de impartir los talleres de artes plásticas en toda la región de Lerma. <br/>
+            Apasionado por el arte. Encargado de impartir talleres de artes plásticas en toda la región de Lerma.<br/>
                Junto con el ayuntamiento de la ciudad de Lerma realizamos exposiciones e inauguramos espacios recreativos para fomentar el deporte, la cultura y el arte.
             </p>
             <p className="home-description">
@@ -37,17 +37,16 @@ const { changeFeed } = useFeed();
               pintura, escultura, música, teatro y arquitectura.
             </p>
             <p className="home-description">
-              El objetivo es crear un ambiente donde los artistas puedan expresarse y compartir sus
-              creaciones.
+              Mi objetivo es crear un ambiente donde los artistas puedan expresarse y compartir sus
+              creaciones. <a id='buttonabout' className='buttonmore' onClick={()=>changeFeed(3)}>Más Información. </a>
             </p>
-            <p className="home-description">
-              En mi galería, encontrarás una muestra de mis obras más destacadas, cada una con un
-              significado especial.
-            </p>
-            {/* <a id='buttonhome' className='button' onClick={()=>changeFeed(3)}>
-              Contacto
-            </a> */}
-     
+            <a id='buttonabout' className='buttonabout' onClick={()=>changeFeed(3)}>
+              Descargar CV 
+            </a>
+            <a id='buttonabout' className='buttonabout' onClick={()=>changeFeed(3)}>
+              Contacto 
+            </a>
+          
             <br />
           </div>
         </div>
